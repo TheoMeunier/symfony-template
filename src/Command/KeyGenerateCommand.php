@@ -38,8 +38,8 @@ class KeyGenerateCommand extends Command
         $editor->load(realpath(dirname(__file__).'/../..') . '/.env');
         $editor->set('APP_SECRET', $secret);
         $editor->save();
-        $io->success('New APP_SECRET was generated: ' . $secret);
 
+        $io->success('New APP_SECRET was generated: ' . $secret);
         return Command::SUCCESS;
     }
 }

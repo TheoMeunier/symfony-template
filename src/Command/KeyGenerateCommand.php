@@ -15,6 +15,29 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 )]
 class KeyGenerateCommand extends Command
 {
+
+    public function __construct
+    (
+        private string $projectDirEnv
+    )
+    {
+        parent::__construct($projectDirEnv);
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $io = new SymfonyStyle($input, $output);
+        $secret = $this->generateRandomString(25);
+
+        $editor = new DotenvEditor();
+        $editor->load($this->projectDirEnv);
+        $editor->set('APP_SECRET', $secret);
+        $editor->save();
+
+        $io->success('New APP_SECRET was generated: ' . $secret);
+        return Command::SUCCESS;
+    }
+
     private function generateRandomString(int $length = 16): string
     {
         $permitted_chart = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -27,19 +50,5 @@ class KeyGenerateCommand extends Command
         }
 
         return $random_string;
-    }
-
-    protected function execute(InputInterface $input, OutputInterface $output): int
-    {
-        $io = new SymfonyStyle($input, $output);
-        $secret = $this->generateRandomString(25);
-
-        $editor = new DotenvEditor();
-        $editor->load(realpath(dirname(__file__).'/../..') . '/.env');
-        $editor->set('APP_SECRET', $secret);
-        $editor->save();
-
-        $io->success('New APP_SECRET was generated: ' . $secret);
-        return Command::SUCCESS;
     }
 }

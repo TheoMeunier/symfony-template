@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24c71f7afed8d6c16a96c61281f312bc",
+    "content-hash": "8485d507b92ac2f189c4b7472fd13815",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2218,6 +2218,59 @@
                 "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v6.2.6"
             },
             "time": "2022-01-14T11:51:13+00:00"
+        },
+        {
+            "name": "sixlive/dotenv-editor",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sixlive/dotenv-editor.git",
+                "reference": "c13a1a043887a5c61079bb98dfa32e0583f4aa52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sixlive/dotenv-editor/zipball/c13a1a043887a5c61079bb98dfa32e0583f4aa52",
+                "reference": "c13a1a043887a5c61079bb98dfa32e0583f4aa52",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.2",
+                "larapack/dd": "^1.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "sixlive\\DotenvEditor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "TJ Miller",
+                    "email": "oss@tjmiller.co",
+                    "homepage": "https://tjmiller.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A tool to edit phpdotenv files",
+            "homepage": "https://github.com/sixlive/dotenv-editor",
+            "keywords": [
+                "dotenv",
+                "dotenv-editor",
+                "phpdotenv"
+            ],
+            "support": {
+                "issues": "https://github.com/sixlive/dotenv-editor/issues",
+                "source": "https://github.com/sixlive/dotenv-editor/tree/v2.0.0"
+            },
+            "time": "2021-11-15T13:52:36+00:00"
         },
         {
             "name": "symfony/asset",
@@ -7906,5 +7959,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }

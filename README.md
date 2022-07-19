@@ -9,5 +9,5 @@
 - Install libs with `composer install`
 - Setup nodejs with `npm install`
 - Run either `npm run dev` or `npm run prod`
-- Generate application secret key in .env at field `APP_SECRET`
+- Generate application secret key in .env at field `APP_SECRET` with `bin/console key-generate`
 - Enjoy :)

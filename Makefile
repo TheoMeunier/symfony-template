@@ -6,11 +6,12 @@ de = $(dc) exec
 composer = $(de) php memory_limit=1 /usr/local/bin/composer
 
 ## —— Docker 🐳  ———————————————————————————————————————————————————————————————
-.PHONY: start
-start:	## Installation du projet
+.PHONY: install
+install:	## Installation du projet
 	$(dc) up -d
 	$(de) php bash -c 'composer install'
 	$(de) php bash -c 'npm install && npm run dev'
+	$(de) php bash -c 'bin/console key-generate'
 
 .PHONY: build
 build:	## Lancer les containers docker au start du projet

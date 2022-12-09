@@ -10,7 +10,7 @@ composer = $(de) php memory_limit=1 /usr/local/bin/composer
 install:	## Installation du projet
 	$(dc) up -d
 	$(de) php bash -c 'composer install'
-	$(de) php bash -c 'npm install && npm run dev'
+	$(de) php bash -c 'yarn && yarn dev'
 	$(de) php bash -c 'bin/console key-generate'
 
 .PHONY: build

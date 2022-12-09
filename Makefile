@@ -53,6 +53,14 @@ phpcs-fix: ## Automatically correct coding standard violations
 twigcs: ## Twigcs (https://github.com/allocine/twigcs)
 	vendor/bin/twigcs templates
 
+.PHONY: prettier
+prettier: ## Format code
+	npx prettier --check 'assets/**/*.{js,scss}' '.prettierrc.json' 'composer.json' 'package.json'
+
+.PHONY: prettier-fix
+prettier-fix: ## Format code
+	npx prettier --write 'assets/**/*.{js,scss}' '.prettierrc.json' 'composer.json' 'package.json'
+
 ## —— Others 🛠️️ ———————————————————————————————————————————————————————————————
 help: ## listing command
 	@grep -E '(^[a-zA-Z0-9_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}{printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' | sed -e 's/\[32m##/[33m/'

@@ -34,6 +34,24 @@ delete:	## delete container
 	$(dc) kill
 	$(dc) rm
 
+## —— Quality Assurance 🛠️️ ———————————————————————————————————————————————————————————————
+.PHONY: phpstan
+phpstan:  ## phpstan
+	vendor/bin/phpstan analyse --memory-limit=2G
+
+.PHONY: phpcs
+phpcs: ## PHP_CodeSnifer Geolid flavoured (https://github.com/Geolid/phpcs)
+	vendor/bin/phpcs
+	vendor/bin/php-cs-fixer fix --dry-run --diff
+
+.PHONY: phpcs-fix
+phpcs-fix: ## Automatically correct coding standard violations
+	vendor/bin/phpcbf
+	vendor/bin/php-cs-fixer fix
+
+.PHONY: twigcs
+twigcs: ## Twigcs (https://github.com/allocine/twigcs)
+	vendor/bin/twigcs templates
 
 ## —— Others 🛠️️ ———————————————————————————————————————————————————————————————
 help: ## listing command

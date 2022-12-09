@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Command;
 
 use sixlive\DotenvEditor\DotenvEditor;
@@ -15,12 +17,9 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 )]
 class KeyGenerateCommand extends Command
 {
-
-    public function __construct
-    (
+    public function __construct(
         private string $projectDirEnv
-    )
-    {
+    ) {
         parent::__construct($projectDirEnv);
     }
 
@@ -43,8 +42,7 @@ class KeyGenerateCommand extends Command
         $permitted_chart = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $random_string = '';
 
-        for ($i = 0; $i < $length; $i++)
-        {
+        for ($i = 0; $i < $length; $i++) {
             $random_character = $permitted_chart[mt_rand(0, $length - 1)];
             $random_string .= $random_character;
         }

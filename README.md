@@ -7,7 +7,7 @@
 - Start containers with `docker-compose up -d`
 - Go into the php container with `docker-compose exec php bash`
 - Install libs with `composer install`
-- Setup nodejs with `npm install`
-- Run either `npm run dev` or `npm run prod`
+- Setup nodejs with `yarn install`
+- Run either `yarn dev` or `yarn prod`
 - Generate application secret key in .env at field `APP_SECRET` with `bin/console key-generate`
 - Enjoy :)

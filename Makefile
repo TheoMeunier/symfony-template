@@ -11,14 +11,14 @@ install:	## Installation du projet
 	$(dc) up -d
 	$(de) php bash -c 'composer install'
 	$(de) php bash -c 'yarn && yarn dev'
-	$(de) php bash -c 'bin/console key-generate'
+	$(de) php bash -c 'php bin/console key-generate'
 
 .PHONY: build
 build:	## Lancer les containers docker au start du projet
 	$(dc) up -d
 	$(dc) exec php bash -c 'composer install'
 	$(dc) exec php bash -c 'npm install && npm run build'
-	$(dc) exec php bash -c 'bin/console d:m:m && bin/console d:f:l'
+	$(dc) exec php bash -c 'php bin/console d:m:m && php bin/console d:f:l'
 
 .PHONY: dev
 dev:	## start container

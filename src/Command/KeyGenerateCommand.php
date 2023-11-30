@@ -33,7 +33,8 @@ class KeyGenerateCommand extends Command
         $editor->set('APP_SECRET', $secret);
         $editor->save();
 
-        $io->success('New APP_SECRET was generated: ' . $secret);
+        $io->success('New APP_SECRET was generated: '.$secret);
+
         return Command::SUCCESS;
     }
 
@@ -42,7 +43,7 @@ class KeyGenerateCommand extends Command
         $permitted_chart = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $random_string = '';
 
-        for ($i = 0; $i < $length; $i++) {
+        for ($i = 0; $i < $length; ++$i) {
             $random_character = $permitted_chart[mt_rand(0, $length - 1)];
             $random_string .= $random_character;
         }

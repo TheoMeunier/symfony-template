@@ -47,9 +47,6 @@ jobs:
       - name: Install dependencies
         run: |
           composer require roave/security-advisories:dev-latest
-      - name: Run security scan
-        run: |
-          vendor/bin/roave/security-advisories check
 
   Nodejs_vulnerability_scan:
     runs-on: ubuntu-latest

@@ -2,9 +2,8 @@
     "devDependencies": {
         "@hotwired/stimulus": "^3.0.0",
         "@symfony/stimulus-bridge": "^3.0.0",
-        "@symfony/webpack-encore": "^1.7.0",
         "core-js": "^3.0.0",
-        "prettier": "2.8.1",
+        "prettier": "^3.3.2",
         "regenerator-runtime": "^0.13.2",
         "webpack-notifier": "^1.6.0"
     },
@@ -17,7 +16,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "node-sass": "^7.0.1",
+        "node-sass": "9.0.0",
         "sass-loader": "^12.6.0"
     }
 }

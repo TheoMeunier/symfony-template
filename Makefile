@@ -46,7 +46,6 @@ phpcs: ## PHP_CodeSnifer Geolid flavoured (https://github.com/Geolid/phpcs)
 
 .PHONY: phpcs-fix
 phpcs-fix: ## Automatically correct coding standard violations
-	vendor/bin/phpcbf
 	vendor/bin/php-cs-fixer fix
 
 .PHONY: twigcs

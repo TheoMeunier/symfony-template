@@ -15,6 +15,7 @@
         "doctrine/orm": "^2.17",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.24.4",
+        "predis/predis": "^2.2",
         "sensio/framework-extra-bundle": "^6.2",
         "sixlive/dotenv-editor": "^2.0",
         "symfony/asset": "6.4.*",

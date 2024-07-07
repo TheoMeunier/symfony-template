@@ -30,7 +30,7 @@ jobs:
           vendor/bin/phpstan analyse --memory-limit=2G
       - name: Run Php cs fixer
         run: |
-          vendor/bin/phpstan analyse --memory-limit=2G
+          vendor/bin/phpcs
 
   Php_vulnerability_scan:
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
         run: cp .env.example .env
       - name: Install dependencies
         run: |
-          composer require --dev roave/security-advisories:dev-latest
+          composer require roave/security-advisories:dev-latest
       - name: Run security scan
         run: |
           vendor/bin/roave/security-advisories check

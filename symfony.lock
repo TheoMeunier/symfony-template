@@ -8,9 +8,6 @@
     "composer/xdebug-handler": {
         "version": "3.0.3"
     },
-    "dealerdirect/phpcodesniffer-composer-installer": {
-        "version": "v0.7.2"
-    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -89,9 +86,6 @@
     "egulias/email-validator": {
         "version": "3.1.2"
     },
-    "escapestudios/symfony2-coding-standard": {
-        "version": "3.13.0"
-    },
     "friendsofphp/php-cs-fixer": {
         "version": "3.13",
         "recipe": {
@@ -109,9 +103,6 @@
     },
     "friendsoftwig/twigcs": {
         "version": "v6.0.0"
-    },
-    "geolid/phpcs": {
-        "version": "12.0.0"
     },
     "laminas/laminas-code": {
         "version": "4.5.1"
@@ -175,21 +166,6 @@
     },
     "sixlive/dotenv-editor": {
         "version": "v2.0.0"
-    },
-    "slevomat/coding-standard": {
-        "version": "7.1"
-    },
-    "squizlabs/php_codesniffer": {
-        "version": "3.7",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "main",
-            "version": "3.6",
-            "ref": "1019e5c08d4821cb9b77f4891f8e9c31ff20ac6f"
-        },
-        "files": [
-            "phpcs.xml.dist"
-        ]
     },
     "symfony/asset": {
         "version": "v6.0.7"

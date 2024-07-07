@@ -30,7 +30,7 @@ jobs:
           vendor/bin/phpstan analyse --memory-limit=2G
       - name: Run Php cs fixer
         run: |
-          vendor/bin/phpcs
+          vendor/bin/php-cs-fixer check
 
   Php_vulnerability_scan:
     runs-on: ubuntu-latest

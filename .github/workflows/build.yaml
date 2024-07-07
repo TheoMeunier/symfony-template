@@ -22,13 +22,13 @@ jobs:
           php-version: '8.3'
       - name: Install dependencies
         run: |
-          APP_ENV=local composer install
+          composer install
       - name: Run PHPStan
         run: |
-          APP_ENV=local vendor/bin/phpstan analyse --memory-limit=2G
+          vendor/bin/phpstan analyse --memory-limit=2G
       - name: Run Php cs fixer
         run: |
-          APP_ENV=local vendor/bin/phpstan analyse --memory-limit=2G
+          vendor/bin/phpstan analyse --memory-limit=2G
 
   Php_vulnerability_scan:
     runs-on: ubuntu-latest
